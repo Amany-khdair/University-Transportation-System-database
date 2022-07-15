@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="648.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.StudentController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-1.0" prefHeight="600.0" prefWidth="648.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="648.0">
+               <children>
+                  <ImageView fitHeight="79.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Photos/classmates.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text cache="true" fill="#793300" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Students Information" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <Pane prefHeight="27.0" prefWidth="648.0">
+               <children>
+                  <TextField fx:id="searchFor" layoutX="9.0" prefHeight="27.0" prefWidth="157.0" promptText="Search for:" />
+                  <Button fx:id="search" layoutX="349.0" mnemonicParsing="false" onMouseClicked="#searchStudent" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: #793300; -fx-text-fill: #F5F5DC; -fx-background-radius: 20px;" text="Search" />
+                  <Button fx:id="refreshButton" layoutX="565.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#refreshTable" style="-fx-background-radius: 30px;" text="Refresh" />
+                  <ChoiceBox fx:id="SearchStudent" layoutX="181.0" layoutY="2.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="students" prefHeight="286.0" prefWidth="648.0">
+               <columns>
+                  <TableColumn fx:id="SID" prefWidth="33.0" text="SID" />
+                  <TableColumn fx:id="PID" prefWidth="76.0" text="PID" />
+                  <TableColumn fx:id="Name" prefWidth="93.0" text="Name" />
+                  <TableColumn fx:id="PhoneNumber" prefWidth="93.0" text="Phone number" />
+                  <TableColumn fx:id="Email" prefWidth="97.0" text="Email" />
+                  <TableColumn fx:id="Major" prefWidth="57.0" text="Major" />
+                  <TableColumn fx:id="Address" prefWidth="107.0" text="Address" />
+                  <TableColumn fx:id="Gender" prefWidth="48.0" text="Gender" />
+                  <TableColumn fx:id="state" prefWidth="43.0" text="State" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="167.0" prefWidth="648.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="167.0" prefWidth="142.0">
+                     <children>
+                        <Label text="Delete Student:" textFill="#793300">
+                           <font>
+                              <Font name="Gill Sans MT Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="SIDDelete" prefHeight="25.0" prefWidth="160.0" promptText="SID">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteStudent" onMouseClicked="#DeleteSID" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #793300; -fx-text-fill: #F5F5DC; -fx-background-radius: 20px;" text="Delete">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="143.0" prefWidth="155.0">
+                     <children>
+                        <Button fx:id="updateStudentInfo" mnemonicParsing="false" onMouseClicked="#updateWindow" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #793300; -fx-background-radius: 40px; -fx-text-fill: #f5f5dc;" text="Update Student info">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="AddStudent" mnemonicParsing="false" onMouseClicked="#AddWindow" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #793300; -fx-background-radius: 40px; -fx-text-fill: #f5f5dc;" text="Add a New Student">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="320.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

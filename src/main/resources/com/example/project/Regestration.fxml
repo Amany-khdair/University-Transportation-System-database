@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#setLabel" prefHeight="600.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.registrationController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="600.0" prefWidth="648.0" style="-fx-background-color: #f5f5dc;">
+         <children>
+            <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="94.0" prefWidth="650.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="93.0" layoutY="22.0" prefHeight="36.0" prefWidth="197.0" text="Registration" textAlignment="CENTER" textFill="#793300">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="71.0" fitWidth="68.0" layoutX="15.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Photos/contact-form.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="347.99993896484375" endY="-9.000007629394531" layoutX="302.0" layoutY="93.0" startX="-301.0" startY="-9.000007629394531" stroke="#793300" strokeWidth="5.0" />
+               </children>
+            </Pane>
+            <VBox layoutX="87.0" layoutY="131.0" prefHeight="90.0" prefWidth="477.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="90.0" prefWidth="477.0">
+                     <children>
+                        <Button fx:id="chooseStudent" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#chooseStudent" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #793300; -fx-background-radius: 40px;" text="Choose Student" textAlignment="CENTER" textFill="BEIGE">
+                           <font>
+                              <Font name="Gill Sans MT Bold" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="chosenStudent" alignment="CENTER" editable="false" prefHeight="38.0" prefWidth="160.0" style="-fx-background-radius: 40px;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="39.0" layoutY="229.0" prefHeight="139.0" prefWidth="576.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="72.0" prefWidth="576.0">
+                     <children>
+                        <TextField fx:id="Hour" alignment="CENTER" promptText="Hour">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ComboBox fx:id="Day" prefHeight="25.0" prefWidth="155.0" promptText="Choose Day">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="576.0">
+                     <children>
+                        <TextField fx:id="Sem" alignment="CENTER" promptText="Semester">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="Year" alignment="CENTER" promptText="Year" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="39.0" layoutY="368.0" prefHeight="72.0" prefWidth="576.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="64.0" prefWidth="576.0">
+                     <children>
+                        <Button fx:id="delete" mnemonicParsing="false" onMouseClicked="#Delete" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #793300; -fx-background-radius: 30PX;" text="Delete" textFill="BEIGE">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Gill Sans MT Bold" size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="register" mnemonicParsing="false" onAction="#setLabel" onMouseClicked="#Register" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #793300; -fx-background-radius: 30PX;" text="Register" textFill="BEIGE">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Gill Sans MT Bold" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="InsertionDone" alignment="CENTER" layoutX="197.0" layoutY="463.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

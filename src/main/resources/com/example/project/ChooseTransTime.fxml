@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="355.0" prefWidth="255.0" style="-fx-background-color: #f5f5dc;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.ChooseTransTimeController">
+    <children>
+        <VBox layoutX="3.0" layoutY="286.0" prefHeight="70.0" prefWidth="250.0">
+            <children>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="324.0">
+                    <children>
+                        <Button fx:id="TChoose" mnemonicParsing="false" onMouseClicked="#chooseTransTime" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #793300; -fx-background-radius: 30PX;" text="Choose" textFill="BEIGE">
+                            <HBox.margin>
+                                <Insets left="75.0" top="15.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Gill Sans MT Bold" size="17.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <TableView fx:id="table" layoutX="6.0" layoutY="8.0" prefHeight="278.0" prefWidth="244.0">
+            <columns>
+                <TableColumn fx:id="Thour" prefWidth="119.99999475479126" text="Hour" />
+                <TableColumn fx:id="Tday" prefWidth="123.33331298828125" text="Day" />
+            </columns>
+        </TableView>
+    </children>
+</Pane>
